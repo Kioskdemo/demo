@@ -1,11 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Select from "../Component/Select";
-import ReactDOMServer, { renderToStaticMarkup, renderToString } from "react-dom/server";
+import ReactDOMServer, {
+  renderToStaticMarkup,
+  renderToString,
+} from "react-dom/server";
 import { ComponentToPrint } from "../PrintableContent";
-
+import { MdKeyboardBackspace } from "react-icons/md";
 
 const options = [
   { label: "First", value: 1 },
@@ -16,14 +20,13 @@ const options = [
 ];
 
 const LandingPage = () => {
-
   const [value, setValue] = useState<(typeof options)[0] | undefined>(
     options[0]
   );
 
   const componentRef = useRef(null);
   const handlePopupPrint = () => {
-  const printWindow = window.open("", "", "width=800,height=400");
+    const printWindow = window.open("", "", "width=800,height=400");
 
     if (printWindow) {
       const content = (
@@ -71,8 +74,8 @@ const LandingPage = () => {
         </body>
         </html>
       `);
-      printWindow.document.querySelectorAll('.no-print').forEach((element) => {
-        element.classList.add('hidden-on-print');
+      printWindow.document.querySelectorAll(".no-print").forEach((element) => {
+        element.classList.add("hidden-on-print");
       });
       printWindow.document.write("</body></html>");
       printWindow.document.close();
@@ -85,17 +88,26 @@ const LandingPage = () => {
 
   return (
     <>
-    <img className="hidden" src="/Qr.png" alt="" />
+      <img className="hidden" src="/Qr.png" alt="" />
       <div className="relative">
         <header className="shadow-[0px_23px_15px_-10px_rgba(0,0,0,0.9)]">
           <div className="justify-center align-center flex p-[50px] mt-[80px]">
-            <h1 className="text-[55px] font-bold pb-[50px]">What would you like to do?</h1>
+            <h1 className="text-[55px] font-bold pb-[50px]">
+              What would you like to do?
+            </h1>
           </div>
         </header>
         <main className="flex flex-col justify-center w-full bgqueue-image">
           <div className="h-[50px]">
+            <Link
+              className="text-[30px] flex items-center gap-2 p-5 m-[20px] w-[200px]"
+              href={"/menu"}
+            >
+              <MdKeyboardBackspace size={40} className="text-[#335F96]" />
+              <p>Back</p>
+            </Link>
             <div className="text-center">
-              <ul className="text-[45px] font-bold p-32 relative">
+              <ul className="text-[45px] font-bold px-28 pt-5 relative">
                 <li className="bg-[#335F96] shadow-[-23px_23px_15px_-10px_rgba(0,0,0,0.3)] rounded-2xl relative m-[40px] p-[30px] ">
                   <Select
                     options={options}
@@ -116,7 +128,10 @@ const LandingPage = () => {
           </div>
           <div className="capitalize text-center mt-[50rem]">
             <Link href={"/menu"}>
-              <button onClick={handlePopupPrint} className="text-[70px] font-bold text-white bg-[#31D84C] rounded-2xl px-40 py-5 shadow-[-23px_23px_15px_-10px_rgba(0,0,0,0.3)]">
+              <button
+                onClick={handlePopupPrint}
+                className="text-[70px] font-bold text-white bg-[#31D84C] rounded-2xl px-40 py-5 shadow-[-23px_23px_15px_-10px_rgba(0,0,0,0.3)]"
+              >
                 Print
               </button>
             </Link>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { MdKeyboardBackspace } from "react-icons/md";
 
 export default function page() {
   return (
@@ -9,7 +10,14 @@ export default function page() {
           <h1 className="text-[55px] font-bold pb-[50px]">Payment Info</h1>
         </div>
       </header>
-      <main className="bgtax-image flex flex-col w-full mt-[50px]">
+      <main className="bgtax-image flex flex-col w-full">
+        <Link
+          className="text-[30px] flex items-center gap-2 p-5 m-[20px] w-[200px]"
+          href={"/pay-business/pay-business-form"}
+        >
+          <MdKeyboardBackspace size={40} className="text-[#335F96]" />
+          <p>Back</p>
+        </Link>
         <div className="flex justify-center flex-col text-[40px]">
           <form action="">
             <div className="flex p-5 gap-5 justify-center flex-col">
@@ -64,7 +72,7 @@ export default function page() {
           </form>
           <div className="flex justify-around pt-20 text-white">
             <Link
-              href={""}
+              href={"/menu"}
               className="bg-[#d3010cee] rounded-2xl py-5 px-16 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
             >
               Cancel
