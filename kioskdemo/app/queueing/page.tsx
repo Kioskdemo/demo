@@ -63,7 +63,6 @@ const LandingPage = () => {
                   />
                 </li>
 
-                {/* <li className="bg-gray-200 px-[25rem] py-[23rem] absolute bottom-[-20px] right-[160px]"></li> */}
                 <li className="bg-[#335F96] text-white shadow-[-23px_23px_15px_-10px_rgba(0,0,0,0.3)] rounded-2xl m-[40px] p-[35px]">
                   Counter No. <span>001</span>
                 </li>
