@@ -5,36 +5,22 @@ export class ComponentToPrint extends React.PureComponent {
   render() {
     return (
       <>
-        <div className='container'>
-          <div className="item">
-            <div className="item-right">
-              <h2 className="num">23</h2>
-              <p className="day">Feb</p>
-              <span className="up-border"></span>
-              <span className="down-border"></span>
+        <div id="invoice-POS">
+          <center id="top">
+            <div className="info">
+              <h2>SBISTechs Inc</h2>
             </div>
-
-            <div className="item-left">
-              <p className="event">Music Event</p>
-              <h2 className="title">Live In Sydney</h2>
-
-              <div className="sce">
-                <div className="icon">
-                  <i className="fa fa-table"></i>
-                </div>
-                <p>Monday 15th 2016 <br /> 15:20Pm & 11:00Am</p>
-              </div>
-              <div className="fix"></div>
-              <div className="loc">
-                <div className="icon">
-                  <i className="fa fa-map-marker"></i>
-                </div>
-                <p>North,Soth, United State , Amre <br /> Party Number 16,20</p>
-              </div>
-              <div className="fix"></div>
-              <button className="tickets">Tickets</button>
-            </div>
-          </div>
+          </center>
+          <div id="mid">
+            <div className="info">
+              <h2>Contact Info</h2>
+              <p className='text-2xl'>
+                Address : street city, state 0000<br />
+                Email   : JohnDoe@gmail.com<br />
+                Phone   : 555-555-5555<br />
+              </p>
+            </div >
+          </div >
         </div>
       </>
     );

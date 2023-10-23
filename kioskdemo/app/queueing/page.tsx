@@ -3,11 +3,9 @@
 import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Select from "../Component/Select";
-import ReactDOMServer, {
-  renderToStaticMarkup,
-  renderToString,
-} from "react-dom/server";
+import ReactDOMServer, { renderToStaticMarkup, renderToString } from "react-dom/server";
 import { ComponentToPrint } from "../PrintableContent";
+
 
 const options = [
   { label: "First", value: 1 },
@@ -18,14 +16,14 @@ const options = [
 ];
 
 const LandingPage = () => {
+
   const [value, setValue] = useState<(typeof options)[0] | undefined>(
     options[0]
   );
 
   const componentRef = useRef(null);
-
   const handlePopupPrint = () => {
-    const printWindow = window.open("", "", "width=1,height=1");
+  const printWindow = window.open("", "", "width=800,height=400");
 
     if (printWindow) {
       const content = (
@@ -33,7 +31,49 @@ const LandingPage = () => {
           <ComponentToPrint />
         </div>
       );
-      printWindow.document.write(ReactDOMServer.renderToString(content));
+      const customStyle = `
+        body {
+          font-size: 12px;
+        }
+        img {
+          height: 100px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @media print {
+          .no-print {
+            display: none;
+          }
+          @page {
+            size: auto;
+            margin: 0;
+          }
+          @page :first {
+            margin-top: 0;
+          }
+          @page :left {
+            margin-left: 0px;
+          }
+          @page :right {
+            margin-right: 0;
+          }
+        }
+      `;
+      printWindow.document.write(`
+        <html>
+        <head>
+          <style>${customStyle}</style>
+        </head>
+        <body>
+        <img src="/Qr.png" alt="" />
+          ${ReactDOMServer.renderToString(content)}
+        </body>
+        </html>
+      `);
+      printWindow.document.querySelectorAll('.no-print').forEach((element) => {
+        element.classList.add('hidden-on-print');
+      });
       printWindow.document.write("</body></html>");
       printWindow.document.close();
       printWindow.print();
@@ -45,14 +85,15 @@ const LandingPage = () => {
 
   return (
     <>
+    <img className="hidden" src="/Qr.png" alt="" />
       <div className="relative">
-        <header className="shadow-[0px_23px_15px_-10px_rgba(0,0,0,0.4)]">
+        <header className="shadow-[0px_23px_15px_-10px_rgba(0,0,0,0.9)]">
           <div className="justify-center align-center flex p-[50px] mt-[80px]">
-            <h1 className="text-[55px] font-bold pb-[50px]">Queueiing</h1>
+            <h1 className="text-[55px] font-bold pb-[50px]">What would you like to do?</h1>
           </div>
         </header>
         <main className="flex flex-col justify-center w-full bgqueue-image">
-          <div className="h-[10px]">
+          <div className="h-[50px]">
             <div className="text-center">
               <ul className="text-[45px] font-bold p-32 relative">
                 <li className="bg-[#335F96] shadow-[-23px_23px_15px_-10px_rgba(0,0,0,0.3)] rounded-2xl relative m-[40px] p-[30px] ">
@@ -63,6 +104,7 @@ const LandingPage = () => {
                   />
                 </li>
 
+                {/* <li className="bg-gray-200 px-[25rem] py-[23rem] absolute bottom-[-20px] right-[160px]"></li> */}
                 <li className="bg-[#335F96] text-white shadow-[-23px_23px_15px_-10px_rgba(0,0,0,0.3)] rounded-2xl m-[40px] p-[35px]">
                   Counter No. <span>001</span>
                 </li>
@@ -73,11 +115,8 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="capitalize text-center mt-[50rem]">
-            <Link href={"#"}>
-              <button
-                onClick={handlePopupPrint}
-                className="text-[70px] font-bold text-white bg-[#31D84C] rounded-2xl px-40 py-5 shadow-[-23px_23px_15px_-10px_rgba(0,0,0,0.3)]"
-              >
+            <Link href={"/menu"}>
+              <button onClick={handlePopupPrint} className="text-[70px] font-bold text-white bg-[#31D84C] rounded-2xl px-40 py-5 shadow-[-23px_23px_15px_-10px_rgba(0,0,0,0.3)]">
                 Print
               </button>
             </Link>
