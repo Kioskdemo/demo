@@ -1,12 +1,27 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { BsTicketDetailed } from "react-icons/bs";
 import { GiPayMoney } from "react-icons/gi";
 import { BsBuildings } from "react-icons/bs";
 import { MdOutlineOtherHouses } from "react-icons/md";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function page() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const timeLimit = 10000;
+
+    const timer = setTimeout(() => {
+      router.push("/");
+    }, timeLimit);
+
+    return () => clearTimeout(timer);
+  });
+
   return (
     <div>
       <header className="shadow-[0px_23px_15px_-10px_rgba(0,0,0,0.4)]">
