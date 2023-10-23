@@ -48,7 +48,7 @@ const LandingPage = () => {
       <div className="relative">
         <header className="shadow-[0px_23px_15px_-10px_rgba(0,0,0,0.4)]">
           <div className="justify-center align-center flex p-[50px] mt-[80px]">
-            <h1 className="text-[55px] font-bold pb-[50px]">Queueing</h1>
+            <h1 className="text-[55px] font-bold pb-[50px]">Queueiing</h1>
           </div>
         </header>
         <main className="flex flex-col justify-center w-full bgqueue-image">
