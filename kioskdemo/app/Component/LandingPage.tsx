@@ -15,7 +15,7 @@ const LandingPage = () => {
           className="opacity-50 object-cover h-[1920px]"
         />
       </div> */}
-      <div className="w-full gap-36 my-[250px]">
+      <div className="w-full gap-36 my-[200px]">
         <div className=" py-5 px-5 my-10 text-center ">
           <h1 className="text-[70px] font-bold leading-none">
             Experience ease of doing business with the government
@@ -25,9 +25,9 @@ const LandingPage = () => {
             Philippines
           </p>
         </div>
-        <div className="capitalize  m-auto py-5 px-5 my-10 text-center">
+        <div className="capitalize  m-auto py-5 px-5 my-10  text-center">
           <Link href={"/menu"}>
-            <button className="text-[70px] font-bold text-[#335F96] animate-bounce">
+            <button className="text-[70px] font-bold text-[#335F96] pt-[20px] mt-[120px] animate-bounce">
               Tap to start !
             </button>
           </Link>

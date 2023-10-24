@@ -41,7 +41,7 @@ const Page: React.FC = () => {
       <main className="bgtax-image flex flex-col w-full">
         <Link
           className="text-[30px] flex items-center gap-2 p-5 m-[20px] w-[200px]"
-          href={"/pay-business/pay-business-form/payment-info"}
+          href={"/other-payments/cedula/payment-info"}
         >
           <MdKeyboardBackspace size={40} className="text-[#335F96]" />
           <p>Back</p>
