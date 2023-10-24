@@ -136,3 +136,16 @@
     background-color: hsl(200, 100%, 70%);
   }
 }
+.keyboard-container {
+  position: fixed;
+  bottom: -100%; /* Initially, hide the keyboard below the screen */
+  left: 0;
+  right: 0;
+  transition: bottom 0.3s ease; /* Add a smooth transition effect */
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.keyboard-container.visible {
+  bottom: 0; /* When visible, slide the keyboard up to the screen */
+}
