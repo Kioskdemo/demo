@@ -7,9 +7,26 @@ import { MdKeyboardBackspace } from "react-icons/md";
 export default function page() {
   return (
     <div>
-      <header className="shadow-[0px_23px_15px_-10px_rgba(0,0,0,0.4)]">
-        <div className="justify-center align-center flex p-[50px] mt-[80px]">
-          <h1 className="text-[55px] font-bold pb-[50px]">Cedula Form</h1>
+      <header className="text-[20px]">
+        <div className="flex justify-between px-10 pt-10 gap-5">
+          <div className="text-center flex flex-col items-center basis-1/4">
+            <div className="w-[80px] h-[80px] bg-white rounded-[50%] border border-[#335F96] flex items-center justify-center flex-col text-[40px]">
+              1
+            </div>
+            <span>View Information</span>
+          </div>
+          <div className="text-center flex flex-col items-center basis-1/4">
+            <div className="w-[80px] h-[80px] bg-white rounded-[50%] border border-[#335F96] flex items-center justify-center flex-col text-[40px]">
+              2{" "}
+            </div>
+            <span>Confirm Payment</span>
+          </div>
+          <div className="text-center flex flex-col items-center basis-1/4">
+            <div className="w-[80px] h-[80px] bg-white rounded-[50%] border border-[#335F96] flex items-center justify-center flex-col text-[40px]">
+              3
+            </div>
+            <span>Payment Type</span>
+          </div>
         </div>
       </header>
       <main className="bgtax-image flex flex-col w-full ">
@@ -21,136 +38,131 @@ export default function page() {
           <p>Back</p>
         </Link>
         <div className="text-[35px] flex flex-col">
-          <form action="s">
-            <div className="flex p-5">
-              <label htmlFor="" className="basis-1/2">
-                Last Name
+          <form action="" className="text-[30px] p-8">
+            <div className="flex justify-center gap-5">
+              <div className="flex flex-col basis-[45%]">
+                <label htmlFor="">Last Name</label>
                 <input
-                  size={8}
-                  name="name"
+                  size={5}
+                  name=""
                   placeholder="Type here"
-                  className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                  className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
                 />
-              </label>
-              <label htmlFor="" className="basis-1/2">
-                First Name
+              </div>
+              <div className="flex flex-col basis-[45%]">
+                <label htmlFor="">First Name</label>
                 <input
-                  size={8}
-                  name="name"
+                  size={5}
+                  name=""
                   placeholder="Type here"
-                  className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                  className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
                 />
-              </label>
-              <label htmlFor="" className="basis-1/4">
-                MI
+              </div>
+              <div className="flex flex-col basis-[10%]">
+                <label htmlFor="">MI</label>
                 <input
-                  size={1}
-                  name="name"
-                  placeholder="Mi"
-                  className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                  size={5}
+                  name=""
+                  placeholder="Type here"
+                  className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
                 />
-              </label>
+              </div>
             </div>
-            <div className="flex flex-col p-5">
-              <label htmlFor="" className="">
-                Place of Birth
-              </label>
+            <div className="flex flex-col">
+              <label htmlFor="">Place Of Birth</label>
               <input
-                size={8}
-                name="name"
+                size={5}
+                name=""
                 placeholder="Type here"
-                className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
               />
             </div>
-            <div className="flex p-5">
-              <label htmlFor="" className="basis-1/2">
-                Birthdate
+
+            <div className="flex justify-center gap-5">
+              <div className="flex flex-col basis-1/2">
+                <label htmlFor="">Birthdate</label>
                 <input
-                  size={13}
-                  name="name"
+                  size={5}
+                  name=""
                   placeholder="Type here"
-                  className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                  className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
                 />
-              </label>
-              <label htmlFor="" className="basis-1/2">
-                Nationality
+              </div>
+              <div className="flex flex-col basis-1/2">
+                <label htmlFor="">Nationality</label>
                 <input
-                  size={14}
-                  name="name"
+                  size={5}
+                  name=""
                   placeholder="Type here"
-                  className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                  className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
                 />
-              </label>
+              </div>
             </div>
-            <div className="flex p-5">
-              <label htmlFor="" className="basis-1/2">
-                Citizenship
+            <div className="flex justify-center gap-5">
+              <div className="flex flex-col basis-[45%]">
+                <label htmlFor="">Citizenship</label>
                 <input
-                  size={8}
-                  name="name"
+                  size={5}
+                  name=""
                   placeholder="Type here"
-                  className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                  className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
                 />
-              </label>
-              <label htmlFor="" className="basis-1/2">
-                Civil Status
+              </div>
+              <div className="flex flex-col basis-[45%]">
+                <label htmlFor="">Civil Status</label>
                 <input
-                  size={8}
-                  name="name"
+                  size={5}
+                  name=""
                   placeholder="Type here"
-                  className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                  className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
                 />
-              </label>
-              <label htmlFor="" className="basis-1/4">
-                Sex
+              </div>
+              <div className="flex flex-col basis-[10%]">
+                <label htmlFor="">Sex</label>
                 <input
-                  size={1}
-                  name="name"
-                  placeholder="M/F"
-                  className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                  size={5}
+                  name=""
+                  placeholder="Type here"
+                  className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
                 />
-              </label>
+              </div>
             </div>
-            <div className="flex flex-col p-5">
-              <label htmlFor="" className="">
-                Permanent Address
-              </label>
+            <div className="flex flex-col">
+              <label htmlFor="">Permanent Address</label>
               <input
-                size={8}
-                name="name"
+                size={5}
+                name=""
                 placeholder="Type here"
-                className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
               />
             </div>
-            <div className="flex p-5">
-              <label htmlFor="" className="basis-1/2">
-                Tel No.
+            <div className="flex justify-center gap-5">
+              <div className="flex flex-col basis-[50%]">
+                <label htmlFor="">Telephone No.</label>
                 <input
-                  size={13}
-                  name="name"
+                  size={5}
+                  name=""
                   placeholder="Type here"
-                  className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                  className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
                 />
-              </label>
-              <label htmlFor="" className="basis-1/2">
-                Mobile No.
+              </div>
+              <div className="flex flex-col basis-[50%]">
+                <label htmlFor="">Mobile No.</label>
                 <input
-                  size={14}
-                  name="name"
+                  size={5}
+                  name=""
                   placeholder="Type here"
-                  className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                  className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
                 />
-              </label>
+              </div>
             </div>
-            <div className="flex flex-col p-5">
-              <label htmlFor="" className="">
-                Occupation
-              </label>
+            <div className="flex flex-col">
+              <label htmlFor="">Occupation</label>
               <input
-                size={8}
-                name="name"
+                size={5}
+                name=""
                 placeholder="Type here"
-                className=" rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
+                className="h-[70px] rounded-2xl bg-gray-100 p-5 shadow-[-15px_23px_15px_-10px_rgba(0,0,0,0.4)]"
               />
             </div>
           </form>

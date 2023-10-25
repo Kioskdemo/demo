@@ -33,9 +33,33 @@ const Page: React.FC = () => {
 
   return (
     <div>
-      <header className="shadow-[0px_23px_15px_-10px_rgba(0,0,0,0.4)]">
-        <div className="justify-center align-center flex p-[50px] mt-[80px]">
-          <h1 className="text-[55px] font-bold pb-[50px]">Payment Type</h1>
+      <header className="text-[20px]">
+        <div className="flex justify-between px-10 pt-10 gap-5">
+          <div className="text-center flex flex-col items-center basis-1/4">
+            <div className="w-[80px] h-[80px] bg-white rounded-[50%] border border-[#335F96] flex items-center justify-center flex-col text-[40px]">
+              1
+            </div>
+            <span>Enter BIN</span>
+          </div>
+
+          <div className="text-center flex flex-col items-center basis-1/4">
+            <div className="w-[80px] h-[80px] bg-white rounded-[50%] border border-[#335F96] flex items-center justify-center flex-col text-[40px]">
+              2
+            </div>
+            <span>View Information</span>
+          </div>
+          <div className="text-center flex flex-col items-center basis-1/4">
+            <div className="w-[80px] h-[80px] bg-white rounded-[50%] border border-[#335F96] flex items-center justify-center flex-col text-[40px]">
+              3
+            </div>
+            <span>Confirm Payment</span>
+          </div>
+          <div className="text-center flex flex-col items-center basis-1/4">
+            <div className="w-[80px] h-[80px] bg-white rounded-[50%] border border-[#335F96] flex items-center justify-center flex-col text-[40px]">
+              4
+            </div>
+            <span>Payment Type</span>
+          </div>
         </div>
       </header>
       <main className="bgtax-image flex flex-col w-full">

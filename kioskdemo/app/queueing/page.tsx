@@ -10,6 +10,12 @@ import ReactDOMServer, {
 } from "react-dom/server";
 import { ComponentToPrint } from "../PrintableContent";
 import { MdKeyboardBackspace } from "react-icons/md";
+import { BsFillPersonFill, BsWater, BsFillBuildingFill } from "react-icons/bs";
+import { AiFillHome, AiFillStop, AiFillCar } from "react-icons/ai";
+import { GiHealthNormal } from "react-icons/gi";
+import { IoTicket } from "react-icons/io5";
+import { FaHelmetSafety } from "react-icons/fa6";
+import CategoryQue from "../Component/CategoryQue";
 
 const options = [
   { label: "First", value: 1 },
@@ -90,43 +96,58 @@ const LandingPage = () => {
     <>
       <img className="hidden" src="/Qr.png" alt="" />
       <div className="relative">
-        <header className="shadow-[0px_23px_15px_-10px_rgba(0,0,0,0.9)]">
-          <div className="justify-center align-center flex p-[50px] mt-[80px]">
-            <h1 className="text-[55px] font-bold pb-[50px]">
-              What would you like to do?
-            </h1>
-          </div>
-        </header>
         <main className="flex flex-col justify-center w-full bgqueue-image">
           <div className="h-[50px]">
             <Link
-              className="text-[30px] flex items-center gap-2 p-5 m-[20px] w-[200px]"
+              className="text-[30px] flex items-center gap-2 p-5  m-[20px] w-[200px]"
               href={"/menu"}
             >
               <MdKeyboardBackspace size={40} className="text-[#335F96]" />
               <p>Back</p>
             </Link>
             <div className="text-center">
-              <ul className="text-[45px] font-bold px-28 pt-5 relative">
-                <li className="bg-[#335F96] shadow-[-23px_23px_15px_-10px_rgba(0,0,0,0.3)] rounded-2xl relative m-[40px] p-[30px] ">
+              <div className="text-[45px] font-bold px-28 pt-5 relative grid grid-rows-3 grid-flow-col gap-5">
+                {/* <li className="bg-[#335F96] shadow-[-23px_23px_15px_-10px_rgba(0,0,0,0.3)] rounded-2xl relative m-[40px] p-[30px] ">
                   <Select
                     options={options}
                     value={value}
                     onChange={(o) => setValue(o)}
                   />
-                </li>
-
-                {/* <li className="bg-gray-200 px-[25rem] py-[23rem] absolute bottom-[-20px] right-[160px]"></li> */}
-                <li className="bg-[#335F96] text-white shadow-[-23px_23px_15px_-10px_rgba(0,0,0,0.3)] rounded-2xl m-[40px] p-[35px]">
-                  Counter No. <span>001</span>
-                </li>
-                <li className="bg-[#335F96] text-white shadow-[-23px_23px_15px_-10px_rgba(0,0,0,0.3)] rounded-2xl m-[40px] p-[35px]">
-                  Queue No. <span>001</span>
-                </li>
-              </ul>
+                </li> */}
+                <CategoryQue
+                  iconImg={<BsFillPersonFill size={50} />}
+                  text={"Cedula"}
+                />
+                <CategoryQue iconImg={<BsWater size={50} />} text={"Water"} />
+                <CategoryQue
+                  iconImg={<BsFillBuildingFill size={50} />}
+                  text={"Construction Permit"}
+                />
+                <CategoryQue
+                  iconImg={<AiFillHome size={50} />}
+                  text={"Cedula"}
+                />
+                <CategoryQue
+                  iconImg={<AiFillStop size={50} />}
+                  text={"Cedula"}
+                />
+                <CategoryQue
+                  iconImg={<AiFillCar size={50} />}
+                  text={"Cedula"}
+                />
+                <CategoryQue
+                  iconImg={<GiHealthNormal size={50} />}
+                  text={"Cedula"}
+                />
+                <CategoryQue iconImg={<IoTicket size={50} />} text={"Cedula"} />
+                <CategoryQue
+                  iconImg={<FaHelmetSafety size={50} />}
+                  text={"Cedula"}
+                />
+              </div>
             </div>
           </div>
-          <div className="capitalize text-center mt-[50rem]">
+          {/* <div className="capitalize text-center mt-[60rem]">
             <Link href={"/menu"}>
               <button
                 onClick={handlePopupPrint}
@@ -135,7 +156,7 @@ const LandingPage = () => {
                 Print
               </button>
             </Link>
-          </div>
+          </div> */}
         </main>
       </div>
     </>

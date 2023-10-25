@@ -27,7 +27,7 @@ const LandingPage = () => {
         </div>
         <div className="capitalize  m-auto py-5 px-5 my-10  text-center">
           <Link href={"/menu"}>
-            <button className="text-[70px] font-bold text-[#335F96] pt-[20px] mt-[120px] animate-bounce">
+            <button className="text-[70px] font-bold text-[#335F96] pt-[20px] mt-[120px] ">
               Tap to start !
             </button>
           </Link>

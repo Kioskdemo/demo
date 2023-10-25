@@ -24,13 +24,6 @@ export default function page() {
 
   return (
     <div>
-      <header className="shadow-[0px_23px_15px_-10px_rgba(0,0,0,0.4)]">
-        <div className="justify-center align-center flex p-[50px] mt-[80px]">
-          <h1 className="text-[55px] font-bold pb-[50px]">
-            What would you like to do?
-          </h1>
-        </div>
-      </header>
       <main className="flex flex-col justify-center w-full bgmenu-image mt-[20px]">
         <ul className="text-[40px] m-[25px] font-bold">
           <Link href={"/queueing"} className="text-[#335F96]">

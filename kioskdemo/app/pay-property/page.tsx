@@ -1,13 +1,38 @@
 import Link from "next/link";
 import React from "react";
 import { MdKeyboardBackspace } from "react-icons/md";
+import InputNumber from "../Component/InputNumber";
 
 export default function page() {
   return (
     <div>
-      <header className="shadow-[0px_23px_15px_-10px_rgba(0,0,0,0.4)]">
-        <div className="justify-center align-center flex p-[50px] mt-[80px]">
-          <h1 className="text-[55px] font-bold pb-[50px]">Pay Property</h1>
+      <header className="text-[20px]">
+        <div className="flex justify-between px-10 pt-10 gap-5">
+          <div className="text-center flex flex-col items-center basis-1/4">
+            <div className="w-[80px] h-[80px] bg-white rounded-[50%] border border-[#335F96] flex items-center justify-center flex-col text-[40px]">
+              1
+            </div>
+            <span>Enter BIN</span>
+          </div>
+
+          <div className="text-center flex flex-col items-center basis-1/4">
+            <div className="w-[80px] h-[80px] bg-white rounded-[50%] border border-[#335F96] flex items-center justify-center flex-col text-[40px]">
+              2
+            </div>
+            <span>View Information</span>
+          </div>
+          <div className="text-center flex flex-col items-center basis-1/4">
+            <div className="w-[80px] h-[80px] bg-white rounded-[50%] border border-[#335F96] flex items-center justify-center flex-col text-[40px]">
+              3
+            </div>
+            <span>Confirm Payment</span>
+          </div>
+          <div className="text-center flex flex-col items-center basis-1/4">
+            <div className="w-[80px] h-[80px] bg-white rounded-[50%] border border-[#335F96] flex items-center justify-center flex-col text-[40px]">
+              4
+            </div>
+            <span>Payment Type</span>
+          </div>
         </div>
       </header>
       <main className="bgtax-image flex flex-col justify-center w-full ">
@@ -18,7 +43,13 @@ export default function page() {
           <MdKeyboardBackspace size={40} className="text-[#335F96]" />
           <p>Back</p>
         </Link>
-        <div className="flex flex-col justify-center items-center gap-20 text-[50px] my-[300px]">
+
+        <InputNumber
+          name="name"
+          placeholder="Enter Tax No."
+          link="/pay-property/pay-property-form"
+        />
+        {/* <div className="flex flex-col justify-center items-center gap-20 text-[50px] my-[300px]">
           <input
             name="firstName"
             placeholder="Enter Your BIN"
@@ -30,7 +61,7 @@ export default function page() {
               Confirm
             </button>
           </Link>
-        </div>
+        </div> */}
       </main>
     </div>
   );
