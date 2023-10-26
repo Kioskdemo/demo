@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-import { BsFillPersonFill } from "react-icons/bs";
 
 interface CategoryQueProps {
   iconImg: ReactNode;
